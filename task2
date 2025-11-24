@@ -1,0 +1,45 @@
+status = input('Введите название статуса вашего заказа(pending, processing, shipped, delivered, cancelled): ')
+
+match status:
+    case 'pending':
+        condition = 'в ожидании'
+        description = 'Заказ только создан и сейчас находится на сборке'
+        time = 'В данный момент время расчитать невозможно'
+        recomendations = 'Проверяйте статус заказа!'
+        emoji = '🕐'
+        
+    case 'processing':
+        condition = 'В обработке'
+        description = 'Заказ обрабатывается службой доставки'
+        time = '3-8 дней'
+        recomendations = 'Ожидайте скорой доставки заказа!'
+        emoji = '📦'
+
+    case 'shipped':
+        condition = 'Заказ отправлен'
+        description = 'Ваш заказ уже едет к вам'
+        time = '1-5 дней'
+        recomendations = 'Следите за уведомлением о доставке заказа на пункт выдачи'
+        emoji = '✈️'
+    
+    case 'delivered':
+        condition = ''
+        description = ''
+        time = ''
+        recomendations = ''
+        emoji = ''
+    
+    case 'cancelled':
+        condition =
+        description =
+        time = 
+        recomendations =
+        emoji =  
+        
+    case _:
+        condition = 
+        description =  
+        time =
+        recomendations = 
+        emoji = 
+        
