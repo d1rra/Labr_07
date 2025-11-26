@@ -1,0 +1,110 @@
+menu = int(input('''
+Выберите напиток из меню: 
+| *  Кофе (1) * 120 ₽
+═════════════════════════
+| * Чай (2) * 80 ₽
+═════════════════════════
+| * Сок (3) * 100 ₽
+═════════════════════════
+| * Вода (4) * 50 ₽
+═════════════════════════
+| * Лимонад (5) * 90 ₽
+═════════════════════════
+'''))
+quantity = int(input('Введите количество товара в заказе числом: '))
+promocode = input('Введите промокод если он у вас есть: ')
+
+match menu:
+    case 1:
+        drink = ('Кофе')
+        price = 120
+        quantity = quantity
+        if promocode == '246':
+            price_1 = int(quantity * price) * 0.9
+            discount = '10%'
+            price_2 = quantity * price
+            price_3 = quantity - price_1
+        else:
+            price_2 = quantity * price
+            discount = ('0%')
+            price_3 = '0'
+            promocode = 'Отсутствует'
+
+    case 2:
+        drink = ('Чай')
+        price = 80
+        quantity = quantity
+        if promocode == '246':
+            price_1 = int(quantity * price) * 0.9
+            discount = '10%'
+            price_2 = quantity * price
+            price_3 = quantity - price_1
+        else:
+            price_2 = quantity * price
+            discount = ('0%')
+            price_3 = '0'
+            promocode = 'Отсутствует'
+        
+    case 3:    
+        drink = ('Сок')
+        price = 100
+        quantity = quantity
+        if promocode == '246':
+            price_1 = int(quantity * price) * 0.9
+            discount = '10%'
+            price_2 = quantity * price
+            price_3 = quantity - price_1
+        else:
+            price_2 = quantity * price
+            discount = ('0%')
+            price_3 = '0'
+            promocode = 'Отсутствует'
+            
+    case 4:        
+        drink = ('Вода')
+        price = 50
+        quantity = quantity
+        if promocode == '246':
+            price_1 = int(quantity * price) * 0.9
+            discount = '10%'
+            price_2 = quantity * price
+            price_3 = quantity - price_1
+        else:
+            price_2 = quantity * price
+            discount = ('0%')
+            price_3 = '0'
+            promocode = 'Отсутствует'
+
+    case 5: 
+        drink = ('Лимонад')
+        price = 90
+        quantity = quantity
+        if promocode == '246':
+            price_1 = int(quantity * price) * 0.9
+            discount = '10%'
+            price_2 = quantity * price
+            price_3 = quantity - price_1
+        else:
+            price_2 = quantity * price
+            discount = ('0%')
+            price_3 = '0'
+            promocode = 'Отсутствует'
+
+    case _:
+        drink = 'Ошибка'
+        price = 1 
+        quantity = quantity
+        price_2 = quantity * price 
+        discount = '0%'
+       price_1 = '' 
+
+print('''
+
+
+
+
+
+
+
+''')
+
