@@ -17,94 +17,110 @@ promocode = input('Введите промокод если он у вас ес�
 match menu:
     case 1:
         drink = ('Кофе')
+        emoji = '☕'
         price = 120
         quantity = quantity
         if promocode == '246':
             price_1 = int(quantity * price) * 0.9
             discount = '10%'
             price_2 = quantity * price
-            price_3 = quantity - price_1
+            price_3 = price_2 - price_1
         else:
             price_2 = quantity * price
-            discount = ('0%')
-            price_3 = '0'
+            discount = '0%'
+            price_3 = 0
+            price_1 = price_2
             promocode = 'Отсутствует'
 
     case 2:
         drink = ('Чай')
+        emoji = '🍵'
         price = 80
         quantity = quantity
         if promocode == '246':
             price_1 = int(quantity * price) * 0.9
             discount = '10%'
             price_2 = quantity * price
-            price_3 = quantity - price_1
+            price_3 = price_2 - price_1
         else:
             price_2 = quantity * price
-            discount = ('0%')
-            price_3 = '0'
+            discount = '0%'
+            price_3 = 0
+            price_1 = price_2
             promocode = 'Отсутствует'
-        
-    case 3:    
+    case 3:
         drink = ('Сок')
+        emoji = '🧃'
         price = 100
         quantity = quantity
         if promocode == '246':
             price_1 = int(quantity * price) * 0.9
             discount = '10%'
             price_2 = quantity * price
-            price_3 = quantity - price_1
+            price_3 = price_2 - price_1
         else:
             price_2 = quantity * price
-            discount = ('0%')
-            price_3 = '0'
+            discount = '0%'
+            price_3 = 0
+            price_1 = price_2
             promocode = 'Отсутствует'
-            
-    case 4:        
+
+    case 4:
         drink = ('Вода')
+        emoji = '💧'
         price = 50
         quantity = quantity
         if promocode == '246':
             price_1 = int(quantity * price) * 0.9
             discount = '10%'
             price_2 = quantity * price
-            price_3 = quantity - price_1
+            price_3 = price_2 - price_1
         else:
             price_2 = quantity * price
-            discount = ('0%')
-            price_3 = '0'
+            discount = '0%'
+            price_3 = 0
+            price_1 = price_2
             promocode = 'Отсутствует'
 
-    case 5: 
+    case 5:
         drink = ('Лимонад')
+        emoji = '🥤'
         price = 90
         quantity = quantity
         if promocode == '246':
             price_1 = int(quantity * price) * 0.9
             discount = '10%'
             price_2 = quantity * price
-            price_3 = quantity - price_1
+            price_3 = price_2 - price_1
         else:
             price_2 = quantity * price
-            discount = ('0%')
-            price_3 = '0'
+            discount = '0%'
+            price_3 = 0
+            price_1 = price_2
             promocode = 'Отсутствует'
 
     case _:
         drink = 'Ошибка'
-        price = 1 
+        emoji = '❌'
+        price = 1
         quantity = quantity
-        price_2 = quantity * price 
+        price_2 = quantity * price
         discount = '0%'
-       price_1 = '' 
+        price_1 = ''
 
-print('''
+print(f'''
+╔══════════════════════════════════════════════╗
+|      {emoji}  КВИТАНЦИЯ КАФЕ {emoji}                   |
+╚══════════════════════════════════════════════╝
+ Товар: {drink} {emoji}
+ Цена за порцию: {price}
+ Количество порций: {quantity} 
+ Сумма: {price_2} 
 
-
-
-
-
-
+Скидка: {promocode} = {discount}
+Размер скидки: {price_3} ₽
+╔══════════════════════════════════════════════╗
+| К ОПЛАТЕ: {price_1}                               |
+╚══════════════════════════════════════════════╝
 
 ''')
-
